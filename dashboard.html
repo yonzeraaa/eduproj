@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard do Aluno</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <img src="avatar-placeholder.png" alt="Foto do Aluno" class="avatar">
+        <h2 id="student-name">Nome do Aluno</h2>
+        <p id="student-registration">Matrícula: 2023001</p>
+      </div>
+      <nav>
+        <ul>
+          <li class="active" data-section="courses">
+            <i class="icon-courses"></i> Minhas Disciplinas
+          </li>
+          <li data-section="grades">
+            <i class="icon-grades"></i> Boletim
+          </li>
+          <li data-section="exams">
+            <i class="icon-exams"></i> Avaliações
+          </li>
+          <li data-section="profile">
+            <i class="icon-profile"></i> Perfil
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="courses-section" class="active">
+        <h1>Minhas Disciplinas</h1>
+        <div class="courses-grid">
+          <div class="course-card">
+            <h3>Matemática</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 65%"></div>
+            </div>
+            <span class="progress-percentage">65%</span>
+            <button class="btn-enter-course">Entrar na Disciplina</button>
+          </div>
+          <div class="course-card">
+            <h3>Português</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 45%"></div>
+            </div>
+            <span class="progress-percentage">45%</span>
+            <button class="btn-enter-course">Entrar na Disciplina</button>
+          </div>
+          <!-- Mais disciplinas serão adicionadas dinamicamente -->
+        </div>
+      </section>
+
+      <section id="grades-section">
+        <h1>Boletim</h1>
+        <table class="grades-table">
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>Nota 1º Bimestre</th>
+              <th>Nota 2º Bimestre</th>
+              <th>Média Final</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Matemática</td>
+              <td>7.5</td>
+              <td>8.0</td>
+              <td>7.75</td>
+              <td class="status approved">Aprovado</td>
+            </tr>
+            <tr>
+              <td>Português</td>
+              <td>6.0</td>
+              <td>5.5</td>
+              <td>5.75</td>
+              <td class="status recovery">Recuperação</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="exams-section">
+        <h1>Próximas Avaliações</h1>
+        <div class="exams-list">
+          <div class="exam-card">
+            <h3>Prova de Matemática</h3>
+            <p>Data: 15/07/2023</p>
+            <p>Horário: 14:00</p>
+            <p>Conteúdo: Álgebra Linear</p>
+            <button class="btn-start-exam">Iniciar Prova</button>
+          </div>
+          <div class="exam-card">
+            <h3>Prova de Português</h3>
+            <p>Data: 22/07/2023</p>
+            <p>Horário: 10:00</p>
+            <p>Conteúdo: Literatura Brasileira</p>
+            <button class="btn-start-exam">Iniciar Prova</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="profile-section">
+        <h1>Perfil do Aluno</h1>
+        <div class="profile-details">
+          <div class="profile-info">
+            <label>Nome Completo:</label>
+            <input type="text" id="full-name" disabled>
+          </div>
+          <div class="profile-info">
+            <label>Email:</label>
+            <input type="email" id="email" disabled>
+          </div>
+          <div class="profile-info">
+            <label>Telefone:</label>
+            <input type="tel" id="phone" disabled>
+          </div>
+          <button class="btn-edit-profile">Editar Perfil</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

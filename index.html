@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro e Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="login-container">
+    <h2 class="title">Entrar</h2>
+    <form id="login-form" action="/login" method="post">
+      <div class="input-group">
+        <label for="login-username">Nome de Usuário</label>
+        <input type="text" id="login-username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="login-password">Senha</label>
+        <input type="password" id="login-password" name="password" required>
+      </div>
+      <div class="input-group remember-me">
+        <input type="checkbox" id="login-remember" name="remember">
+        <label for="login-remember">Lembrar de mim</label>
+      </div>
+      <button type="submit" class="btn">Entrar</button>
+      <div class="links">
+        <a href="#" id="show-register">Cadastre-se</a>
+        <a href="#" id="show-forgot-password">Esqueceu a senha?</a>
+      </div>
+    </form>
+  </div>
+  <div class="container" id="register-container" style="display: none;">
+    <h2 class="title">Cadastro</h2>
+    <form id="register-form" action="/register" method="post">
+      <div class="input-group">
+        <label for="register-email">Email</label>
+        <input type="email" id="register-email" name="email" required>
+      </div>
+      <div class="input-group">
+        <label for="register-username">Usuário</label>
+        <input type="text" id="register-username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="register-password">Senha</label>
+        <input type="password" id="register-password" name="password" required>
+      </div>
+      <div class="input-group">
+        <label for="register-confirm-password">Confirmar Senha</label>
+        <input type="password" id="register-confirm-password" name="confirm-password" required>
+      </div>
+      <div class="input-group">
+        <label for="register-phone">Telefone (WhatsApp)</label>
+        <input type="tel" id="register-phone" name="phone" placeholder="(DDD) Número" required>
+      </div>
+      <button type="submit" class="btn">Cadastrar</button>
+      <div class="links">
+        <a href="#" id="show-login">Já tem uma conta? Entrar</a>
+      </div>
+    </form>
+  </div>
+  <div class="container" id="forgot-password-container" style="display: none;">
+    <h2 class="title">Recuperar Senha</h2>
+    <form id="forgot-password-form">
+      <div class="input-group">
+        <label for="forgot-email">Email</label>
+        <input type="email" id="forgot-email" name="email" required>
+      </div>
+      <button type="submit" class="btn">Enviar</button>
+      <div class="links">
+        <a href="#" id="back-to-login">Voltar para o Login</a>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
